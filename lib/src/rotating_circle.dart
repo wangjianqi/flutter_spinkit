@@ -37,6 +37,8 @@ class _SpinKitRotatingCircleState extends State<SpinKitRotatingCircle>
     super.initState();
     _controller = widget.controller ??
         AnimationController(vsync: this, duration: widget.duration);
+
+    ///动画
     _animation1 = Tween(begin: 0.0, end: 180.0).animate(
       CurvedAnimation(
         parent: _controller,
@@ -44,6 +46,7 @@ class _SpinKitRotatingCircleState extends State<SpinKitRotatingCircle>
       ),
     )..addListener(() => setState(() {}));
 
+    ///动画
     _animation2 = Tween(begin: 0.0, end: 180.0).animate(
       CurvedAnimation(
         parent: _controller,
@@ -62,6 +65,7 @@ class _SpinKitRotatingCircleState extends State<SpinKitRotatingCircle>
 
   @override
   Widget build(BuildContext context) {
+    ///x轴和y轴翻转
     final Matrix4 transform = Matrix4.identity()
       ..rotateX((0 - _animation1.value) * 0.0174533)
       ..rotateY((0 - _animation2.value) * 0.0174533);

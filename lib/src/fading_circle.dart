@@ -11,6 +11,7 @@ class SpinKitFadingCircle extends StatefulWidget {
     this.duration = const Duration(milliseconds: 1200),
     this.controller,
   })  : assert(
+  ///itemBuilder和color必须设置一个
             !(itemBuilder is IndexedWidgetBuilder && color is Color) &&
                 !(itemBuilder == null && color == null),
             'You should specify either a itemBuilder or a color'),
@@ -49,6 +50,7 @@ class _SpinKitFadingCircleState extends State<SpinKitFadingCircle>
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox.fromSize(
+        ///平方的
         size: Size.square(widget.size),
         child: Stack(
           children: [

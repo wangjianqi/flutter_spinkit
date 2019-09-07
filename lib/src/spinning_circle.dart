@@ -7,6 +7,7 @@ class SpinKitSpinningCircle extends StatefulWidget {
   SpinKitSpinningCircle({
     Key key,
     this.color,
+    ///默认是圆形
     this.shape = BoxShape.circle,
     this.size = 50.0,
     this.itemBuilder,
@@ -59,6 +60,7 @@ class _SpinKitSpinningCircleState extends State<SpinKitSpinningCircle>
 
   @override
   Widget build(BuildContext context) {
+    ///y轴旋转
     final Matrix4 transform = Matrix4.identity()
       ..rotateY((0 - _animation1.value) * pi);
     return Center(

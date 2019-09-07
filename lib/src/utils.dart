@@ -2,6 +2,7 @@ import 'dart:math' as math show sin, pi;
 
 import 'package:flutter/widgets.dart';
 
+///自定义区间
 class DelayTween extends Tween<double> {
   DelayTween({
     double begin,

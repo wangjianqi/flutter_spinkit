@@ -54,6 +54,7 @@ class _SpinKitPumpingHeartState extends State<SpinKitPumpingHeart>
 
   @override
   Widget build(BuildContext context) {
+    ///缩放动画
     return ScaleTransition(
       scale: _anim1,
       child: _itemBuilder(0),

@@ -67,6 +67,7 @@ class _SpinKitHourGlassState extends State<SpinKitHourGlass>
   }
 }
 
+///绘制
 class _HourGlassPainter extends CustomPainter {
   _HourGlassPainter({this.weight = 90.0, Color color}) {
     p.color = color;

@@ -53,6 +53,7 @@ class _SpinKitPulseState extends State<SpinKitPulse>
   @override
   Widget build(BuildContext context) {
     return Center(
+      ///透明度和缩放动画
       child: Opacity(
         opacity: 1.0 - _animation.value,
         child: Transform.scale(

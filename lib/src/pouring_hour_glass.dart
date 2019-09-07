@@ -76,6 +76,7 @@ class _SpinKitPouringHourglassState extends State<SpinKitPouringHourglass>
   void _repaint() => this.setState(() {});
 }
 
+///绘制
 class _HourGlassPaint extends CustomPainter {
   _HourGlassPaint({
     this.poured,

@@ -9,15 +9,21 @@ class WorkSpace extends StatelessWidget {
       width: 300.0,
       height: 300.0,
       child: SpinKitFadingCircle(
-        itemBuilder: (_, int index) {
-          return DecoratedBox(
-            decoration: BoxDecoration(
-              color: index.isEven ? Colors.red : Colors.green,
-            ),
-          );
-        },
-        size: 120.0,
+        color: Colors.redAccent,
       ),
+    );
+  }
+
+  SpinKitFadingCircle buildSpinKitFadingCircle() {
+    return SpinKitFadingCircle(
+      itemBuilder: (_, int index) {
+        return DecoratedBox(
+          decoration: BoxDecoration(
+            color: index.isEven ? Colors.red : Colors.green,
+          ),
+        );
+      },
+      size: 120.0,
     );
   }
 }
